@@ -5,4 +5,6 @@ node {
     stage('package'){
     bat label: '', script: 'mvn package'
     }
+    stage('artifacts archive')
+    archive 'gameoflife-web/*.war'
 }
