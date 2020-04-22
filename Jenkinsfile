@@ -6,5 +6,5 @@ node {
     bat label: '', script: 'mvn package'
     }
     stage('artifacts archive')
-    archive 'gameoflife-web/*.war'
+    archive 'gameoflife-web/target/*.war'
 }
