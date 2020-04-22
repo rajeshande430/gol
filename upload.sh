@@ -1,0 +1,3 @@
+echo %BRANCH_NAME%
+echo %BUILD_NUMBER%
+echo %WORKSPACE%
