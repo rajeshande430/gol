@@ -8,7 +8,4 @@ node('JS 2') {
     stage('artifacts archive'){
     archive 'gameoflife-web/target/*.war'
     }
-    stage('j unit test results'){
-    junit 'gameoflife-web/target/surefire/*'
-    }
 }
