@@ -14,4 +14,7 @@ node('JS 02') {
     stage('archive artifacts'){
         archive 'gameoflife-web/target/game*.war'
     }
+    stage('archive test results'){
+        junit 'gameoflife-web/target/surefire/*'
+    }
 }
