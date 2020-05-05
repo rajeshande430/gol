@@ -12,6 +12,6 @@ node('JS 02') {
         sh 'mvn package'
     }
     stage('archive artifacts'){
-        archive 'target/game*.war'
+        archive 'gameoflife-web/target/game*.war'
     }
 }
