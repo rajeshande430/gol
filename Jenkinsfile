@@ -1,11 +1,17 @@
-node('JS 2') {
-    stage('git clone') {
-    git 'https://github.com/rajeshande430/gol.git'
+node('JS 02') {
+    stage('GIT CLONE'){
+        git 'https://github.com/wakaleo/game-of-life.git'
     }
-    stage('package'){
-    sh 'mvn package'
+    stage('build tool maven compile'){
+        sh 'mvn compile'
     }
-    stage('artifacts archive'){
-    archive 'gameoflife-web/target/*.war'
+    stage('build tool maven test'){
+        sh 'mvn test'
+    }
+    stage('build tool maven package'){
+        sh 'mvn package'
+    }
+    stage('archive artifacts'){
+        archive 'gameoflife-web/target/game*.war'
     }
 }
